@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/search"
+        android:title="@string/search_title"
+        android:orderInCategory="2"
+        android:icon="@drawable/magnify"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
+
+    <item
+        android:id="@+id/sort"
+        android:title="Sort"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_filter_outline"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/manage_categories"
+        android:title="@string/categories"
+        android:orderInCategory="2" />
+
+    <item android:id="@+id/profile"
+        android:title="@string/profile"
+        android:orderInCategory="3" />
+
+    <item android:id="@+id/server_sync"
+        android:title="@string/sync_data"
+        android:orderInCategory="4"/>
+
+    <item android:id="@+id/exit"
+        android:title="@string/exit"
+        android:orderInCategory="5"/>
+
+</menu>

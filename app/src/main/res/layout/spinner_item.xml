@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    >
+
+    <ImageView
+        android:layout_marginLeft="8dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/spinner_image" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/spinner_category_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="17sp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/spinner_image"
+        android:layout_toRightOf="@+id/spinner_image"/>
+
+
+</RelativeLayout>

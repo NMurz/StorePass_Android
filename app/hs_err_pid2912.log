@@ -1,0 +1,189 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 166736 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:323), pid=2912, tid=8732
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_79-b15) (build 1.7.0_79-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000007fdf800):  JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=8732, stack(0x0000000009650000,0x0000000009750000)]
+
+Stack: [0x0000000009650000,0x0000000009750000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+
+Current CompileTask:
+C2:   1835  100             com.android.dx.ssa.SsaMethod::forEachInsn (36 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000007fe5800 JavaThread "Service Thread" daemon [_thread_blocked, id=7792, stack(0x0000000009750000,0x0000000009850000)]
+=>0x0000000007fdf800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=8732, stack(0x0000000009650000,0x0000000009750000)]
+  0x0000000007fd5800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=5172, stack(0x0000000009550000,0x0000000009650000)]
+  0x0000000007fd4800 JavaThread "Attach Listener" daemon [_thread_blocked, id=7148, stack(0x0000000009450000,0x0000000009550000)]
+  0x0000000007fd1800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5472, stack(0x0000000009350000,0x0000000009450000)]
+  0x0000000007f99800 JavaThread "Finalizer" daemon [_thread_blocked, id=4620, stack(0x0000000009250000,0x0000000009350000)]
+  0x0000000007f96000 JavaThread "Reference Handler" daemon [_thread_blocked, id=8604, stack(0x0000000009150000,0x0000000009250000)]
+  0x000000000200d800 JavaThread "main" [_thread_in_Java, id=8772, stack(0x0000000001eb0000,0x0000000001fb0000)]
+
+Other Threads:
+  0x0000000007f91000 VMThread [stack: 0x0000000009050000,0x0000000009150000] [id=8200]
+  0x0000000007ff4000 WatcherThread [stack: 0x0000000009850000,0x0000000009950000] [id=8312]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 37888K, used 13168K [0x00000000eaa80000, 0x00000000ed480000, 0x0000000100000000)
+  eden space 32768K, 40% used [0x00000000eaa80000,0x00000000eb75c208,0x00000000eca80000)
+  from space 5120K, 0% used [0x00000000ecf80000,0x00000000ecf80000,0x00000000ed480000)
+  to   space 5120K, 0% used [0x00000000eca80000,0x00000000eca80000,0x00000000ecf80000)
+ ParOldGen       total 85504K, used 0K [0x00000000c0000000, 0x00000000c5380000, 0x00000000eaa80000)
+  object space 85504K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000c5380000)
+ PSPermGen       total 21504K, used 5343K [0x00000000bae00000, 0x00000000bc300000, 0x00000000c0000000)
+  object space 21504K, 24% used [0x00000000bae00000,0x00000000bb337f70,0x00000000bc300000)
+
+Card table byte_map: [0x0000000005200000,0x0000000005430000] byte_map_base: 0x0000000004c29000
+
+Polling page: 0x00000000008e0000
+
+Code Cache  [0x0000000002140000, 0x00000000023b0000, 0x0000000005140000)
+ total_blobs=333 nmethods=99 adapters=186 free_code_cache=48617Kb largest_free_block=49761920
+
+Compilation events (10 events):
+Event: 1.765 Thread 0x0000000007fd5800 nmethod 95 0x00000000021c2690 code [0x00000000021c27e0, 0x00000000021c2978]
+Event: 1.769 Thread 0x0000000007fdf800   96             com.android.dx.ssa.NormalSsaInsn::getSources (8 bytes)
+Event: 1.769 Thread 0x0000000007fdf800 nmethod 96 0x00000000021c2450 code [0x00000000021c2580, 0x00000000021c25f8]
+Event: 1.773 Thread 0x0000000007fd5800   97             com.android.dx.rop.code.RegisterSpec::equals (51 bytes)
+Event: 1.776 Thread 0x0000000007fdf800   98             java.util.BitSet::recalculateWordsInUse (39 bytes)
+Event: 1.777 Thread 0x0000000007fd5800 nmethod 97 0x00000000021c1d10 code [0x00000000021c1e60, 0x00000000021c2158]
+Event: 1.778 Thread 0x0000000007fd5800   99             com.android.dx.rop.code.RegisterSpec::hashCodeOf (30 bytes)
+Event: 1.778 Thread 0x0000000007fdf800 nmethod 98 0x00000000021c1ad0 code [0x00000000021c1c00, 0x00000000021c1c98]
+Event: 1.780 Thread 0x0000000007fd5800 nmethod 99 0x00000000021c1610 code [0x00000000021c1760, 0x00000000021c18d8]
+Event: 1.782 Thread 0x0000000007fdf800  100             com.android.dx.ssa.SsaMethod::forEachInsn (36 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (3 events):
+Event: 1.361 Thread 0x000000000200d800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00000000021acac4 method=java.util.HashMap.getEntry(Ljava/lang/Object;)Ljava/util/HashMap$Entry; @ 68
+Event: 1.418 Thread 0x000000000200d800 Uncommon trap: reason=null_check action=make_not_entrant pc=0x00000000021b882c method=com.android.dx.rop.code.LocalItem.equals(Ljava/lang/Object;)Z @ 1
+Event: 1.784 Thread 0x000000000200d800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00000000021b0518 method=com.android.dx.ssa.NormalSsaInsn.accept(Lcom/android/dx/ssa/SsaInsn$Visitor;)V @ 9
+
+Internal exceptions (10 events):
+Event: 0.753 Thread 0x000000000200d800 Threw 0x00000000eb124c50 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 0.769 Thread 0x000000000200d800 Threw 0x00000000eb132008 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 0.776 Thread 0x000000000200d800 Threw 0x00000000eb13dd78 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 0.776 Thread 0x000000000200d800 Threw 0x00000000eb140b10 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 1.361 Thread 0x000000000200d800 Threw 0x00000000eb3aaa10 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 1.418 Thread 0x000000000200d800 Implicit null exception at 0x00000000021b84d5 to 0x00000000021b8819
+Event: 1.604 Thread 0x000000000200d800 Threw 0x00000000eb4bc218 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 1.738 Thread 0x000000000200d800 Threw 0x00000000eb61a698 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 1.749 Thread 0x000000000200d800 Threw 0x00000000eb6403b0 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 1.750 Thread 0x000000000200d800 Threw 0x00000000eb642778 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+
+Events (10 events):
+Event: 1.749 loading class 0x0000000007fa8030 done
+Event: 1.750 loading class 0x0000000008033ed0
+Event: 1.750 loading class 0x0000000008033ed0 done
+Event: 1.783 loading class 0x0000000007ff7510
+Event: 1.783 loading class 0x0000000007ff7510 done
+Event: 1.783 loading class 0x0000000007ff74e0
+Event: 1.784 loading class 0x0000000007ff74e0 done
+Event: 1.784 Thread 0x000000000200d800 Uncommon trap: trap_request=0xffffffde fr.pc=0x00000000021b0518
+Event: 1.784 Thread 0x000000000200d800 DEOPT PACKING pc=0x00000000021b0518 sp=0x0000000001faeba0
+Event: 1.784 Thread 0x000000000200d800 DEOPT UNPACKING pc=0x00000000021775a4 sp=0x0000000001faeaf0 mode 2
+
+
+Dynamic libraries:
+0x00007ff760c20000 - 0x00007ff760c53000 	C:\Program Files\Java\jdk1.7.0_79\bin\java.exe
+0x00007ffe40950000 - 0x00007ffe40afc000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffe3f9b0000 - 0x00007ffe3faee000 	C:\Windows\system32\KERNEL32.DLL
+0x00007ffe3de00000 - 0x00007ffe3df15000 	C:\Windows\system32\KERNELBASE.dll
+0x00007ffe3c640000 - 0x00007ffe3c6ce000 	C:\Windows\system32\apphelp.dll
+0x00007ffe0cdc0000 - 0x00007ffe0ce13000 	C:\Windows\AppPatch\AppPatch64\AcGenral.DLL
+0x00007ffe3fbb0000 - 0x00007ffe3fc5a000 	C:\Windows\system32\msvcrt.dll
+0x00007ffe3d940000 - 0x00007ffe3d96e000 	C:\Windows\SYSTEM32\SspiCli.dll
+0x00007ffe40480000 - 0x00007ffe404d4000 	C:\Windows\system32\SHLWAPI.dll
+0x00007ffe407d0000 - 0x00007ffe40947000 	C:\Windows\system32\USER32.dll
+0x00007ffe40090000 - 0x00007ffe40224000 	C:\Windows\system32\ole32.dll
+0x00007ffe3e470000 - 0x00007ffe3f99b000 	C:\Windows\system32\SHELL32.dll
+0x00007ffe3d0a0000 - 0x00007ffe3d0c1000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ffe40540000 - 0x00007ffe405ea000 	C:\Windows\system32\ADVAPI32.dll
+0x00007ffe31790000 - 0x00007ffe317ae000 	C:\Windows\SYSTEM32\MPR.dll
+0x00007ffe3fc60000 - 0x00007ffe3fda1000 	C:\Windows\system32\RPCRT4.dll
+0x00007ffe3e200000 - 0x00007ffe3e259000 	C:\Windows\SYSTEM32\sechost.dll
+0x00007ffe3dfd0000 - 0x00007ffe3e1e1000 	C:\Windows\SYSTEM32\combase.dll
+0x00007ffe40270000 - 0x00007ffe403c0000 	C:\Windows\system32\GDI32.dll
+0x00007ffe3daa0000 - 0x00007ffe3dab5000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ffe3c010000 - 0x00007ffe3c0c2000 	C:\Windows\SYSTEM32\SHCORE.dll
+0x00007ffe40230000 - 0x00007ffe40266000 	C:\Windows\system32\IMM32.DLL
+0x00007ffe405f0000 - 0x00007ffe40742000 	C:\Windows\system32\MSCTF.dll
+0x00007ffe3b700000 - 0x00007ffe3b97b000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.18006_none_623f33d3ecbe86e8\COMCTL32.dll
+0x00000000645c0000 - 0x0000000064692000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\msvcr100.dll
+0x0000000064a30000 - 0x0000000065205000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\server\jvm.dll
+0x00007ffe35b50000 - 0x00007ffe35b59000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffe363d0000 - 0x00007ffe363f2000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffe3fdb0000 - 0x00007ffe3fdb7000 	C:\Windows\system32\PSAPI.DLL
+0x00007ffe404e0000 - 0x00007ffe4053a000 	C:\Windows\system32\WS2_32.dll
+0x00007ffe363a0000 - 0x00007ffe363ca000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffe3e1f0000 - 0x00007ffe3e1f9000 	C:\Windows\system32\NSI.dll
+0x00007ffe3dbd0000 - 0x00007ffe3dc1f000 	C:\Windows\SYSTEM32\cfgmgr32.dll
+0x00007ffe3c890000 - 0x00007ffe3c8b8000 	C:\Windows\SYSTEM32\DEVOBJ.dll
+0x0000000065300000 - 0x000000006530f000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\verify.dll
+0x0000000064a00000 - 0x0000000064a28000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\java.dll
+0x00000000649e0000 - 0x00000000649f5000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\zip.dll
+0x00000000649c0000 - 0x00000000649da000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\net.dll
+0x00007ffe3d310000 - 0x00007ffe3d369000 	C:\Windows\system32\mswsock.dll
+0x00000000649a0000 - 0x00000000649b1000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\nio.dll
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx1024M -Dfile.encoding=windows-1251 -Duser.country=RU -Duser.language=ru -Duser.variant 
+java_command: com.android.dx.command.Main --dex --output C:\Users\Nurs\AndroidStudioProjects\PasswordBook\app\build\intermediates\pre-dexed\debug\okio-1.6.0_c401358536d8966411355eeb3fbc7c731ab9ca95.jar C:\Users\Nurs\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Windows\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Skype\Phone\;;C:\Program Files (x86)\Simlock Remote Client
+USERNAME=Nurs
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 8244012k(870544k free), swap 11389740k(5192k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.79-b02) for windows-amd64 JRE (1.7.0_79-b15), built on Apr 10 2015 12:36:16 by "java_re" with unknown MS VC++:1600
+
+time: Wed Jan 20 02:06:27 2016
+elapsed time: 1 seconds
+

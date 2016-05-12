@@ -1,0 +1,157 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">PasswordBook</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale" translatable="false">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="search_title">Search</string>
+    <string name="title_activity_main2" translatable="false">Main2Activity</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="login">Login</string>
+    <string name="register_string">Not registered yet?</string>
+    <string name="forgotPass">Forgot password?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_add_password">Add Password</string>
+    <string name="title_activity_add_category">Add Category</string>
+
+
+    <string name="color_picker_default_title">Create category</string>
+    <string name="color_picker_edit">Edit category</string>
+    <!-- Content description for a color square. -->
+    <string name="color_swatch_description" translatable="false">Color <xliff:g example="14" id="color_index">%1$d</xliff:g></string>
+    <!-- Content description for a selected color square. -->
+    <string name="color_swatch_description_selected" translatable="false">Color <xliff:g example="14" id="color_index">%1$d</xliff:g> selected</string>
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <string name="title_activity_view_password">ViewPasswordActivity</string>
+    <string name="title_activity_edit_password">Edit Password</string>
+    <string name="email_edittext">Email</string>
+    <string name="password_edittext">Password</string>
+    <string name="confirmPassword_edittext">Confirm Password</string>
+    <string name="signUp_edittext">Sign Up</string>
+    <string name="loginLink_textview">Already a member? Login</string>
+    <string name="appName_textview" translatable="false">Password Book</string>
+    <string name="emptyData_textview">No data available</string>
+    <string name="category_edittext">Category name</string>
+    <string name="categoryColor_textview">Select Color</string>
+    <string name="confirm_btn">Confirm</string>
+    <string name="selectCategory_txt">Select category</string>
+    <string name="title_edittxt">Title</string>
+    <string name="website_edittxt">Website</string>
+    <string name="account_edtitxt">Account</string>
+    <string name="username_edittxt">Username</string>
+    <string name="password_edittxt">Password</string>
+    <string name="description_edittxt">Description</string>
+    <string name="title_activity_profile" translatable="false">ProfileActivity</string>
+    <string name="selectLanguage">Select Language</string>
+    <string name="authorization">Authorization</string>
+    <string name="invalid_credentials">Invalid login or password</string>
+    <string name="try_again">Try again</string>
+    <string name="connection">Connection</string>
+    <string name="networkUnreachable">Network is unreachable.\nPlease check internet connection!</string>
+    <string name="input_title">Input title</string>
+    <string name="input_webaddress">Input website address</string>
+    <string name="input_accountname">Input account name</string>
+    <string name="input_password">Input password</string>
+    <string name="entry_created">Entry created</string>
+    <string name="select_language">Select Language</string>
+    <string name="email_invalid">Email address invalid</string>
+    <string name="password_check">Password must contain at least one uppercase, lowercase, digit and symbol</string>
+    <string name="password_not_match">Password not match</string>
+    <string name="register_success">Register Success</string>
+    <string name="categories">Manage Categories</string>
+    <string name="profile">Profile</string>
+    <string name="sync_data">Sync data</string>
+    <string name="exit">Exit</string>
+    <string name="save_button">Confirm</string>
+    <string-array name="language">
+        <item>English</item>
+        <item>Русский</item>
+        <item>Кыргызча</item>
+    </string-array>
+    <string name="title_activity_lock_screen">LockScreenActivity</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+</resources>
